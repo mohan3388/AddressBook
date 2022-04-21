@@ -1,0 +1,15 @@
+D:\dotnet\AddressBook\AddressBook\AddressBook\bin\Debug\net6.0\AddressBook.exe
+D:\dotnet\AddressBook\AddressBook\AddressBook\bin\Debug\net6.0\AddressBook.deps.json
+D:\dotnet\AddressBook\AddressBook\AddressBook\bin\Debug\net6.0\AddressBook.runtimeconfig.json
+D:\dotnet\AddressBook\AddressBook\AddressBook\bin\Debug\net6.0\AddressBook.dll
+D:\dotnet\AddressBook\AddressBook\AddressBook\bin\Debug\net6.0\AddressBook.pdb
+D:\dotnet\AddressBook\AddressBook\AddressBook\obj\Debug\net6.0\AddressBook.csproj.AssemblyReference.cache
+D:\dotnet\AddressBook\AddressBook\AddressBook\obj\Debug\net6.0\AddressBook.GeneratedMSBuildEditorConfig.editorconfig
+D:\dotnet\AddressBook\AddressBook\AddressBook\obj\Debug\net6.0\AddressBook.AssemblyInfoInputs.cache
+D:\dotnet\AddressBook\AddressBook\AddressBook\obj\Debug\net6.0\AddressBook.AssemblyInfo.cs
+D:\dotnet\AddressBook\AddressBook\AddressBook\obj\Debug\net6.0\AddressBook.csproj.CoreCompileInputs.cache
+D:\dotnet\AddressBook\AddressBook\AddressBook\obj\Debug\net6.0\AddressBook.dll
+D:\dotnet\AddressBook\AddressBook\AddressBook\obj\Debug\net6.0\refint\AddressBook.dll
+D:\dotnet\AddressBook\AddressBook\AddressBook\obj\Debug\net6.0\AddressBook.pdb
+D:\dotnet\AddressBook\AddressBook\AddressBook\obj\Debug\net6.0\AddressBook.genruntimeconfig.cache
+D:\dotnet\AddressBook\AddressBook\AddressBook\obj\Debug\net6.0\ref\AddressBook.dll
