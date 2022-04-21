@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "D:\\dotnet\\AddressBook\\AddressBook\\AddressBook\\AddressBook.csproj": {}
+    "D:\\dotnet\\AddressBook\\AddressBook\\AddressBook\\Addressbook.csproj": {}
   },
   "projects": {
-    "D:\\dotnet\\AddressBook\\AddressBook\\AddressBook\\AddressBook.csproj": {
+    "D:\\dotnet\\AddressBook\\AddressBook\\AddressBook\\Addressbook.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dotnet\\AddressBook\\AddressBook\\AddressBook\\AddressBook.csproj",
-        "projectName": "AddressBook",
-        "projectPath": "D:\\dotnet\\AddressBook\\AddressBook\\AddressBook\\AddressBook.csproj",
+        "projectUniqueName": "D:\\dotnet\\AddressBook\\AddressBook\\AddressBook\\Addressbook.csproj",
+        "projectName": "Addressbook",
+        "projectPath": "D:\\dotnet\\AddressBook\\AddressBook\\AddressBook\\Addressbook.csproj",
         "packagesPath": "C:\\Users\\Mohan sahu\\.nuget\\packages\\",
         "outputPath": "D:\\dotnet\\AddressBook\\AddressBook\\AddressBook\\obj\\",
         "projectStyle": "PackageReference",

@@ -1,22 +1,36 @@
-﻿using System;
-using AddressBookSolution;
+﻿
+using System;
+using Address_Book;
 class program
 {
     public static void Main(String[] args)
     {
-        Console.WriteLine("Enter the Address Details");
+        AddressBook contact = new AddressBook();
 
-        AddressBook addressBook = new AddressBook();
-        addressBook.Display();
+        Console.WriteLine("Welcome to Address Book Project");
+        bool check = true;
+        while (check)
+        {
+            Console.WriteLine("1.add contact\n2.display contact\n3.update contact");
+            int option = Convert.ToInt32(Console.ReadLine());
+            switch (option)
+            {
+                case 1:
+                    contact.AddContact();
+                    break;
+                case 2:
+                    contact.Display();
+                    break;
+                case 3:
+                    contact.Update();
+                    break;
+                case 4:
+                    check = false;
+                    break;
 
-    Contact address=new Contact ();
-        address.FirstName =Console.ReadLine();
-        address.LastName =Console.ReadLine();
-        address.Address=Console.ReadLine();
-        address.State = Console.ReadLine();
-        address.Email = Console.ReadLine();
-        address.Zip =Convert.ToInt32(Console.ReadLine());
-        address.Mobile =Convert.ToInt64 (Console.ReadLine());
-        Console.WriteLine(address.FirstName+" "+ address.LastName+" "+ address.Address+" "+ address.State+" "+ address.Email+" "+ address.Zip+" "+ address.Mobile);
+            }
+        }
+
+
     }
 }
