@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AddressBook
+namespace Address_Book
 {
     public class Contact
     {
@@ -14,8 +14,13 @@ namespace AddressBook
         public string City { get; set; }
         public string State { get; set; }
         public int Zip { get; set; }
-
-        public long Mobile { get; set; }
+        public long Phone { get; set; }
         public string Email { get; set; }
+
+        internal static void Remove(Contact delete)
+        {
+            throw new NotImplementedException();
+        }
     }
+
 }

@@ -1,32 +1,42 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AddressBook
+﻿
+using System;
+using Address_Book;
+class program
 {
-    public class AddressBook
+    public static void Main(String[] args)
     {
+        AddressBook contact = new AddressBook();
 
-
-        public static void Main(String[] args)
+        Console.WriteLine("Welcome to Address Book Project");
+        bool check = true;
+        while (check)
         {
-            Console.WriteLine("Enter Contact Details: ");
-
-            Contact address = new Contact();
+            Console.WriteLine("1.Add Contact\n2.Display Contact\n3.Update Contact\n4.Delete Contact\n5.Multiple Contact");
+            int option = Convert.ToInt32(Console.ReadLine());
+            switch (option)
             {
-                address.FirstName = Console.ReadLine();
-                address.LastName = Console.ReadLine();
-                address.Address = Console.ReadLine();
-                address.City = Console.ReadLine();
-                address.State = Console.ReadLine();
-                address.Zip = Convert.ToInt32(Console.ReadLine());
-                address.Mobile = Convert.ToInt64(Console.ReadLine());
-                address.Email = Console.ReadLine();
+                case 1:
+                    contact.AddContact();
+                    break;
+                case 2:
+                    contact.Display();
+                    break;
+                case 3:
+                    contact.Update();
+                    break;
+                case 4:
+                    contact.Delete();
+                    break;
+                case 5:
+                    contact.AddMultipleContacts();
+                    break;
+                case 0:
+                    check = false;
+                    break;
 
-                Console.WriteLine(address.FirstName + " " + address.LastName + " " + address.Address + " " + address.City + " " + address.State + " " + address.Zip + " " + address.Mobile + " " + address.Email);
             }
         }
+
+
     }
 }
