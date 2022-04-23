@@ -1,148 +1,115 @@
-﻿
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Collections.Generic;
-using System;
 
-namespace Address_Book
+namespace AddressBook
 {
-    public class AddressBook
+    public class Address
     {
-        List<Contact> addContact = new List<Contact>();
-        public void AddContact()
+        List<Contact> addBook = new List<Contact>();    
+
+        public Address()
         {
-
-            Console.WriteLine("Enter the Address Details");
-
             Contact contact1 = new Contact()
             {
-                FirstName = Convert.ToString(Console.ReadLine()),
-
-                LastName = Convert.ToString(Console.ReadLine()),
-
-                Address = Convert.ToString(Console.ReadLine()),
-
-                City = Convert.ToString(Console.ReadLine()),
-
-                State = Convert.ToString(Console.ReadLine()),
-
-                Zip = Convert.ToInt32(Console.ReadLine()),
-
-                Phone = Convert.ToInt64(Console.ReadLine()),
-
-                Email = Convert.ToString(Console.ReadLine()),
-
+               firstName = "mohan",
+               lastName = "sahu",
+               Address = "green valey",
+               City = "bhilai",
+               State = "cg",
+               Email = "sahu@12gmail.com",
+               Zip = 12451,
+               Phone = 744551552
+                    
             };
             Contact contact2 = new Contact()
             {
-                FirstName = "Mohan",
-
-                LastName = "Sahu",
-
-                Address = "green valley Bhilai",
-
-                City = "Bhilai",
-
-                State = "CG",
-
-                Zip = 490014,
-
-                Phone = 8417852542,
-
-                Email = "Mohan@gm.com",
-
+                firstName = "rajesh",
+               lastName = "sah",
+               Address = "green valey",
+               City = "bhilai",
+               State = "cg",
+               Email = "sahu@12gmail.com",
+               Zip = 12451,
+               Phone = 744551552
             };
-
             Contact contact3 = new Contact()
             {
-                FirstName = "Rajesh",
-
-                LastName = "verma",
-
-                Address = "chouhan town bhilai",
-
-                City = "Bhilai",
-
-                State = "CG",
-
-                Zip = 491421,
-
-                Phone = 8574123647,
-
-                Email = "raj@gmail.com",
-
+                firstName = Console.ReadLine(),
+               lastName = Console.ReadLine(),
+               Address = Console.ReadLine(),
+               City = Console.ReadLine(),
+               State = Console.ReadLine(),
+               Email = Console.ReadLine(),
+               Zip = Convert.ToInt32(Console.ReadLine()),
+               Phone = Convert.ToInt64(Console.ReadLine()),
             };
-            addContact.Add(contact1);
-            addContact.Add(contact2);
-            addContact.Add(contact3);
+            addBook.Add(contact1);
+            addBook.Add(contact2);
+            addBook.Add(contact3);
         }
+
+      
+
         public void Display()
         {
-            foreach (var contact in addContact)
+            foreach(var contact in addBook)
             {
-                Console.WriteLine(contact.FirstName + " " + contact.LastName + " " + contact.Address + " " + contact.City + " " + contact.State + " " + contact.Zip + " " + contact.Phone + " " + contact.Email);
+                Console.WriteLine(contact.firstName + " " + contact.lastName + " " + contact.Address + " " + contact.City + " " + contact.State + " " + contact.Email + " " + contact.Zip + " " + contact.Phone);
             }
         }
-
-
-        public void Update()
+        public void EditAddress(string name)
         {
-            foreach (var contact in addContact)
+            foreach (var contact in addBook)
             {
-                Console.WriteLine("Enter The Number First Name");
-                string name = Convert.ToString(Console.ReadLine());
-
-                if (contact.FirstName.Equals(name))
+                if (contact.firstName.Equals(name))
                 {
-                    Console.WriteLine("1.LastName\n2.Address\n3.City\n4.State\n5.Pin\n6.PhoneNumber\n7.Email ");
-                    int optionn = Convert.ToInt32(Console.ReadLine());
-                    switch (optionn)
+                    Console.WriteLine("1.firstname\n 2.lastname\n 3.Address\n 4.City\n 5.State\n 6.email\n 7.zip\n 8.phone");
+                    Console.WriteLine("choose any above option To Update");
+                    int option = Convert.ToInt32(Console.ReadLine());
+                    switch (option)
                     {
                         case 1:
-                            Console.WriteLine("enter the last name you want to edit : ");
-                            contact.LastName = Console.ReadLine();
+                            Console.WriteLine("Type FirstName to Update");
+                            contact.firstName = Console.ReadLine(); 
                             break;
                         case 2:
-                            Console.WriteLine("enter the address you want to edit :");
-                            contact.Address = Console.ReadLine();
+                            Console.WriteLine("Type LastName to Update");
+                            contact.lastName = Console.ReadLine(); 
                             break;
                         case 3:
-                            Console.WriteLine("enter the city: ");
-                            contact.City = Console.ReadLine();
+                            Console.WriteLine("Type Address to Update");
+                            contact.Address = Console.ReadLine(); 
                             break;
                         case 4:
-                            Console.WriteLine("enter the state you want to edit :");
-                            contact.State = Console.ReadLine();
+                            Console.WriteLine("Type City to Update");
+                            contact.City = Console.ReadLine(); 
                             break;
                         case 5:
-                            Console.WriteLine("enter the email you want to edit :");
-                            contact.Email = Console.ReadLine();
+                            Console.WriteLine("Type State to Update");
+                            contact.State = Console.ReadLine(); 
                             break;
                         case 6:
-                            Console.WriteLine("enter the zip you want to edit :");
-                            contact.Zip = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Type Email to Update");
+                            contact.Email = Console.ReadLine(); 
                             break;
                         case 7:
-                            Console.WriteLine("enter the phone you want to edit :");
+                            Console.WriteLine("Type Zip to Update");
+                            contact.Zip = Convert.ToInt32(Console.ReadLine()); break;
+                        case 8:
+                            Console.WriteLine("Type Mobile to Update");
                             contact.Phone = Convert.ToInt64(Console.ReadLine());
                             break;
-                        default:
-                            Console.WriteLine("Choose the right option : ");
+                        default: 
+                            Console.WriteLine("type correct option");
                             break;
                     }
-
-
                 }
-                else
-                {
-                    Console.WriteLine("Name not Exist");
-                }
-                Display();
+               
             }
+            Display();
         }
     }
 }
