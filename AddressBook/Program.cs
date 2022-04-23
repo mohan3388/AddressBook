@@ -1,42 +1,45 @@
-﻿
 using System;
-using Address_Book;
-class program
-{
-    public static void Main(String[] args)
-    {
-        AddressBook contact = new AddressBook();
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-        Console.WriteLine("Welcome to Address Book Project");
-        bool check = true;
-        while (check)
+namespace AddressBook
+{
+    public class Program
+    {
+        public static void Main(String[] args)
         {
-            Console.WriteLine("1.Add Contact\n2.Display Contact\n3.Update Contact\n4.Delete Contact\n5.Multiple Contact");
-            int option = Convert.ToInt32(Console.ReadLine());
-            switch (option)
+            Console.WriteLine("Welcome the program");
+            Address addressBook = new Address();
+            Console.WriteLine("Please Enter the Information");
+            bool check = true;
+            Console.WriteLine("1.Display \n 2.Edit \n 3.Delete");
+
+            while (check)
             {
-                case 1:
-                    contact.AddContact();
-                    break;
-                case 2:
-                    contact.Display();
-                    break;
-                case 3:
-                    contact.Update();
-                    break;
-                case 4:
-                    contact.Delete();
-                    break;
-                case 5:
-                    contact.AddMultipleContacts();
-                    break;
-                case 0:
-                    check = false;
-                    break;
+                Console.WriteLine("Enter The Above option");
+                int option = Convert.ToInt32(Console.ReadLine());
+                switch (option)
+                {
+                    case 1:
+                        addressBook.Display();
+                        break;
+                    case 2:
+                        Console.WriteLine("Enter the first name to edit");
+                        string name = Console.ReadLine();
+                        addressBook.EditAddress(name);
+                        break;
+                    case 3:
+                        Console.WriteLine("enter first name to delete");
+                        addressBook.Delete();
+                        break;
+                    default: 
+                        check = false;
+                        break;
+                }
 
             }
         }
-
-
     }
 }
