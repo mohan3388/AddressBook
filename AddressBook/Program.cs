@@ -6,26 +6,50 @@ using System.Threading.Tasks;
 
 namespace AddressBook
 {
-    public class AddressBook
+    public class Program
     {
-
-
         public static void Main(String[] args)
         {
-            Console.WriteLine("Enter Contact Details: ");
+            Console.WriteLine("Welcome the program");
+            Address addressBook = new Address();
+            Console.WriteLine("Please Enter the Information");
+            bool check = true;
+            Console.WriteLine("1.Display \n 2.Edit \n 3.Delete \n 4.Add data in dictionary \n 5.Edit data in dictionary");
 
-            Contact address = new Contact();
+            while (check)
             {
-                address.FirstName = Console.ReadLine();
-                address.LastName = Console.ReadLine();
-                address.Address = Console.ReadLine();
-                address.City = Console.ReadLine();
-                address.State = Console.ReadLine();
-                address.Zip = Convert.ToInt32(Console.ReadLine());
-                address.Mobile = Convert.ToInt64(Console.ReadLine());
-                address.Email = Console.ReadLine();
+                Console.WriteLine("Enter The Above option");
+                int option = Convert.ToInt32(Console.ReadLine());
+                switch (option)
+                {
+                    case 1:
+                        addressBook.Display();
+                        break;
+                    case 2:
+                        Console.WriteLine("Enter the first name to edit");
+                        string name = Console.ReadLine();
+                        addressBook.EditAddress(name);
+                        break;
+                    case 3:
+                        Console.WriteLine("enter first name to delete");
+                        addressBook.Delete();
+                        break;
+                    case 4:
+                        Console.WriteLine("enter name for add data dictionary");
+                        string dictionaryName = Console.ReadLine();
+                        addressBook.Adddict(dictionaryName);
+                        break;
+                    case 5:
+                        Console.WriteLine("enter the name for Edit data");
+                        string diname = Console.ReadLine();
+                        string contName = Console.ReadLine();
+                        addressBook.EditDict(diname, contName);
+                        break;
+                    default:
+                        check = false;
+                        break;
+                }
 
-                Console.WriteLine(address.FirstName + " " + address.LastName + " " + address.Address + " " + address.City + " " + address.State + " " + address.Zip + " " + address.Mobile + " " + address.Email);
             }
         }
     }
