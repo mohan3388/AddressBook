@@ -27,6 +27,7 @@ namespace AddressBook
 
                 Console.WriteLine(address.FirstName + " " + address.LastName + " " + address.Address + " " + address.City + " " + address.State + " " + address.Zip + " " + address.Mobile + " " + address.Email);
             }
+            
         }
     }
 }
