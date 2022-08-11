@@ -14,7 +14,6 @@ namespace AddressBook
         public string City { get; set; }
         public string State { get; set; }
         public int Zip { get; set; }
-
         public long Mobile { get; set; }
         public string Email { get; set; }
     }
