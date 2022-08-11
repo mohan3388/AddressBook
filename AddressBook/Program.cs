@@ -13,8 +13,7 @@ namespace AddressBook
         public static void Main(String[] args)
         {
             Console.WriteLine("Enter Contact Details: ");
-
-          Address add = new Address();
+            Address add = new Address();
             add.Display();
         }
     }
