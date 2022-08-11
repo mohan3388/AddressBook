@@ -50,6 +50,7 @@ namespace AddressBook
             addBook.Add(contact2);
             addBook.Add(contact3);
         }
+        
         public void Display()
         {
             foreach(var contact in addBook)
