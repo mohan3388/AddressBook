@@ -9,7 +9,6 @@ namespace AddressBook
     public class Address
     {
         List<Contact> addBook = new List<Contact>();    
-
         public Address()
         {
             Contact contact1 = new Contact()
